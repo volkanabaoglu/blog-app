@@ -8,7 +8,11 @@ const AppRouter = () => {
             <div>
                 <Header></Header>
                 <Switch>
-                    <Route component={HomePage} />
+                    <Route path="/" component={HomePage} />
+                    <Route path="/blogs" component={BlogListPage} />
+                    <Route path="/blogs/:id" component={BlogDetailsPage} />
+                    <Route path="/contact" component={ContactPage} />
+                    <Route component={NotFoundPage} />
                 </Switch>
             </div>
         </BrowserRouter>
